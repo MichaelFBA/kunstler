@@ -1,0 +1,13 @@
+{
+  "name": "kunstler",
+  "private": true,
+  "scripts": {
+    "start": "meteor run"
+  },
+  "dependencies": {
+    "bcrypt": "^0.8.7",
+    "moment": "^2.14.1",
+    "p5": "^0.5.3",
+    "tracking": "^1.1.2"
+  }
+}

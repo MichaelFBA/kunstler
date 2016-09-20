@@ -1,0 +1,13 @@
+#video{
+    width:100%;
+    height:auto;
+}
+
+#canvas
+{
+    transform: rotateY(180deg);
+    -webkit-transform:rotateY(180deg); /* Safari and Chrome */
+    -moz-transform:rotateY(180deg); /* Firefox */
+    width:100%;
+    height:auto;
+}
