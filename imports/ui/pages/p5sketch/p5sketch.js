@@ -10,5 +10,5 @@ Template.p5sketch.onCreated(function(){
 })
 
 Template.p5sketch.onRendered(function() {
-    sketch();
+    sketch(FlowRouter.getParam('id'));
 });

@@ -1,5 +1,7 @@
+import { Artwork } from '/imports/api/artwork/artwork.js';
 import p5 from '/node_modules/p5/lib/p5.min.js'
-export function sketch() {
+
+export function sketch(id) {
 
 	new p5(function(p) {
 		// All the paths
@@ -11,6 +13,7 @@ export function sketch() {
 		// Where are we now and where were we?
 		var current;
 		var previous;
+		var art;
 
 		p.setup = function() {
 			var container = p.createCanvas(720, 400);
@@ -19,11 +22,14 @@ export function sketch() {
 		};
 
 		p.draw = function() {
+
+
 			p.background(200);
 
 			// If it's time for a new point
 			if (p.millis() > next && painting) {
-
+				art = Artwork.findOne({_id: id}) || {};
+				console.log('art', art);
 				// Grab mouse position
 				current.x = p.mouseX;
 				current.y = p.mouseY;
